@@ -3,6 +3,7 @@
  * @create 2019/10/17
  */
 public class Problem9 {
+
     public boolean isPalindrome(int x) {
         if(x < 0){
             return false;

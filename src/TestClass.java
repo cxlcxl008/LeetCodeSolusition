@@ -1,9 +1,9 @@
 public class TestClass implements TestInterface {
 
-    @Override
-    public void testMethod() {
-        System.out.println("class method");
-    }
+    //@Override
+    //public void testMethod() {
+    //    System.out.println("class method");
+    //}
 
     @Override
     public void testMethod2() {

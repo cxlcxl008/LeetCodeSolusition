@@ -3,6 +3,7 @@
  * @create 2019/10/17
  */
 public class Problem10 {
+    //dp
     public boolean isMatch(String s, String p) {
         if (p.isEmpty()) {
             return s.isEmpty();
