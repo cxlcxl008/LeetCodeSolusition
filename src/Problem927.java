@@ -16,19 +16,22 @@ public class Problem927 {
                 index[++cnt] = i;
             }
         }
+        if (cnt == 0) {
+            return new int[]{0, len - 1};
+        }
         if (cnt % 3 != 0) {
             return new int[]{-1, -1};
         }
-        int count_zero = len - index[cnt];
+        int count_zero = len - index[cnt] - 1;
         int t = cnt / 3;
         //int result_i = index[t] + count_zero;
         //int result_j = index[2*t] + count_zero + 1;
-        for(int i = index[0],j=index[t+1],k=index[2*t+1];k<len;i++,j++,k++){
-            if(A[i] != A[j] || A[j] != A[k]){
+        for (int i = index[1], j = index[t + 1], k = index[2 * t + 1]; k < len; i++, j++, k++) {
+            if (A[i] != A[j] || A[j] != A[k]) {
                 return new int[]{-1, -1};
             }
         }
-        return new int[]{index[t] + count_zero,index[2*t] + count_zero + 1};
+        return new int[]{index[t] + count_zero, index[2 * t] + count_zero + 1};
 
     }
 }
